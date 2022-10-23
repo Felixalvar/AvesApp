@@ -13,7 +13,6 @@ configobj==5.0.6
 cryptography==2.8
 dbus-python==1.2.16
 decorator==5.1.1
-defer==1.0.6
 distro==1.4.0
 entrypoints==0.3
 gitdb==4.0.9
