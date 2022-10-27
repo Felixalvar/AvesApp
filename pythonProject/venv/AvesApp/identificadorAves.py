@@ -1,5 +1,5 @@
 """Esta es una aplicación para identificar, por medio de filtros, aves de la zona del Baixo Miño. A medida que vamos
-seleccionando filtros vasmos cribando el número de aves hasta dar con la que nos interesa. Si no la encontramos podemos
+seleccionando filtros vamos cribando el número de aves hasta dar con la que nos interesa. Si no la encontramos podemos
 limpiar los filtros y volver a empezar."""
 
 
@@ -152,7 +152,7 @@ col1, col2 = st.columns([1, 1], gap="large")
 # Podemos hacerla de igual tamaño de esta otra forma:
 # col1, col2 = st.columns(2)
 
-# Damos contenido a la columna de la derecha donde irán las imágenes de las aves seleccionadas.
+# Damos contenido a la columna de la izquierda donde irán las fichas de las aves seleccionadas.
 with col1:
     # Situamos a los usuarios geográficamente mediante la imagen de un mapa con los concellos que forman O Baixo Miño.
     st.subheader('_Situación geográfica:_')
@@ -194,9 +194,9 @@ with col1:
             st.subheader('_Ficha:_')
             st.caption(texto)
 
-# En la colmna 2 mostraremos la/s foto/s del/de las ave/s filtrada/s
+# En la colmna de la derecha mostraremos la/s foto/s del/de las ave/s filtrada/s, e informaremos como usar el buscador.
 with col2:
-    # Informamos del funcionamiento del programa
+    # INFORMACIÓN DEL FUNCIONAMIENTO DEL PROGRAMA
     # Indicamos un subtítulo
     st.subheader('_Uso del buscador:_')
     # Informamos de los pasos a seguir
