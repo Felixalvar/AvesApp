@@ -156,7 +156,7 @@ col1, col2 = st.columns([1, 1], gap="large")
 with col1:
     # Situamos a los usuarios geográficamente mediante la imagen de un mapa con los concellos que forman O Baixo Miño.
     st.subheader('_Situación geográfica:_')
-    st.image('./Archivos/FotosDef/BaixoMiño.png')
+    st.image('./Archivos/FotosDef/BaixoMino.png')
     # Recorremos el fichero .ods con pd.read_excel.
     df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:L')
 
