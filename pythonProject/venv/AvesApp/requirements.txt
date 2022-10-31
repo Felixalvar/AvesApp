@@ -64,7 +64,6 @@ pycrypto==2.6.1
 pycups==1.9.73
 pydeck==0.8.0b3
 Pygments==2.13.0
-PyGObject==3.36.0
 PyICU==2.4.2
 pyinotify==0.9.6
 PyJWT==2.6.0
