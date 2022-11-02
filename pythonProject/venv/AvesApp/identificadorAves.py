@@ -14,6 +14,7 @@ st.set_page_config(
     # page_icon='🪶',
     page_icon=':owl:',
     layout='wide',
+    initial_sidebar_state="expanded",
 )
 
 # Inicializamos todos los filtros de la barra lateral con una cadena vacía para que al iniciar la aplicación no dé
