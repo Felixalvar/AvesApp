@@ -16,6 +16,14 @@ st.set_page_config(
     layout='wide',
 )
 
+# Ocultamos el menú de hamburguesas
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 # Inicializamos todos los filtros de la barra lateral con una cadena vacía para que al iniciar la aplicación no dé
 # ningún error.
 tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor = picoColor = picoForma = picoGrorsor = \
