@@ -12,8 +12,8 @@ import pandas as pd
 st.set_page_config(
     page_title='Buscador de Aves do Baixo Miño',
     # page_icon='🪶',
-    # page_icon=':owl:',
-    page_icon=':feather:',
+    page_icon=':owl:',
+    # page_icon=':feather:',
     layout='wide',
 )
 
