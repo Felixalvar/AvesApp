@@ -157,6 +157,8 @@ with col1:
     # Situamos a los usuarios geográficamente mediante la imagen de un mapa con los concellos que forman O Baixo Miño.
     st.subheader('_Situación geográfica:_')
     st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/BaixoMino.png')
+    st.caption("""**Espacio declarado Red Natura 2000 y Zona de Especial Protección para las Aves (ZEPA)**.
+                  https://es.wikipedia.org/wiki/Red_Natura_2000""")
     # Recorremos el fichero .ods con pd.read_excel.
     df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:L')
 
