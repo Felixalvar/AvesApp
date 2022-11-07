@@ -18,7 +18,7 @@ st.set_page_config(
 
 # Inicializamos todos los filtros de la barra lateral con una cadena vacía para que al iniciar la aplicación no dé
 # ningún error.
-tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor = picoColor = picoForma = picoGrorsor = \
+nombreAve = tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor = picoColor = picoForma = picoGrorsor = \
     picoLongitud = ""
 
 # Creamos los checkbox de cada filtro de búsqueda en la barra lateral con sus opciones correspondientes y la
@@ -26,6 +26,119 @@ tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor = picoColor =
 with st.sidebar:
     # Creamos la etiqueta subtítulo 'Filtro'
     st.subheader('Filtros:')
+    # Creamos las casillas de verificación y sus opciones correspondientes. La primera opoción son todas las aves para
+    # que si el usuario conoce el ave pueda elegirla e ir directamente a la ficha y foto de esa ave.
+    if st.checkbox('Ave:'):
+        nombreAve = st.selectbox('Elige un ave', ['',
+                                                  'Abubilla',
+                                                  'Acentor Común',
+                                                  'Agachadiza Chica',
+                                                  'Agachadiza Común',
+                                                  'Águila Pescadora',
+                                                  'Agateador Común',
+                                                  'Aguja Colipinta',
+                                                  'Alcatraz',
+                                                  'Alcotán',
+                                                  'Ánade Azulón',
+                                                  'Andarríos Chico',
+                                                  'Archibebe Claro',
+                                                  'Arrendajo',
+                                                  'Avión Común',
+                                                  'Azor',
+                                                  'Bisbita Común',
+                                                  'Buitrón',
+                                                  'Camachuelo Común',
+                                                  'Carbonero Común',
+                                                  'Carbonero Garrapinos',
+                                                  'Carricerín Cejudo',
+                                                  'Cernícalo Vulgar',
+                                                  'Charrán Común',
+                                                  'Charrán Patinegro',
+                                                  'Chochín',
+                                                  'Chorlitejo Grande',
+                                                  'Chorlitejo Patinegro',
+                                                  'Chorlito Gris',
+                                                  'Chotacabras Gris',
+                                                  'Cigüeña Blanca',
+                                                  'Colirrojo Tizón',
+                                                  'Cormorán Grande',
+                                                  'Cormorán Moñudo',
+                                                  'Corneja Negra',
+                                                  'Correlimos Común',
+                                                  'Correlimos Tridáctilo',
+                                                  'Críalo',
+                                                  'Cuco',
+                                                  'Curruca Cabecinegra',
+                                                  'Curruca Capirotada',
+                                                  'Curruca Mosquitera',
+                                                  'Curruca Rabilarga',
+                                                  'Curruca Zarcera',
+                                                  'Escribano Cerillo',
+                                                  'Escribano Montesino',
+                                                  'Escribano Palustre',
+                                                  'Escribano Soteño',
+                                                  'Espátula',
+                                                  'Estornino Negro',
+                                                  'Estornino Pinto',
+                                                  'Faisán Vulgar',
+                                                  'Focha Común',
+                                                  'Fumarel Común',
+                                                  'Garceta Común',
+                                                  'Garceta Grande',
+                                                  'Garza Real',
+                                                  'Gavilán',
+                                                  'Gaviota Argéntea',
+                                                  'Gaviota Patiamarilla',
+                                                  'Gaviota Reidora',
+                                                  'Gaviota Sombría',
+                                                  'Golondrina Común',
+                                                  'Golondrina Daúrica',
+                                                  'Gorrión Común',
+                                                  'Gorrión Molinero',
+                                                  'Halcón Abejero',
+                                                  'Halcón Común',
+                                                  'Herrerillo Capuchino',
+                                                  'Herrerillo Común',
+                                                  'Jilguero',
+                                                  'Lavandera Blanca Común',
+                                                  'Lavandera Boyera Ibérica',
+                                                  'Lavandera Cascadeña',
+                                                  'Lechuza Común',
+                                                  'Lúgano',
+                                                  'Martín Pescador',
+                                                  'Milano Negro',
+                                                  'Mirlo Común',
+                                                  'Mito',
+                                                  'Mochuelo Común',
+                                                  'Mosquitero Común',
+                                                  'Negrón Común',
+                                                  'Ostrero',
+                                                  'Paloma Torcaz',
+                                                  'Papamoscas Cerrojillo',
+                                                  'Perdiz Común',
+                                                  'Petirrojo',
+                                                  'Pico de Coral',
+                                                  'Pico Menor',
+                                                  'Pico Picapinos',
+                                                  'Pinzón Vulgar',
+                                                  'Pito Real',
+                                                  'Polla de Agua',
+                                                  'Ratonero Común',
+                                                  'Reyezuelo Listado',
+                                                  'Reyezuelo Sencillo',
+                                                  'Tarabilla Común',
+                                                  'Tórtola Común',
+                                                  'Tórtola Turca',
+                                                  'Urraca',
+                                                  'Vencejo Común',
+                                                  'Verdecillo',
+                                                  'Verderón',
+                                                  'Vuelvepiedras',
+                                                  'Zarapito Trinador',
+                                                  'Zarcero Común',
+                                                  'Zorzal Común',
+                                                  ])
+  
     # Creamos las casillas de verificación y sus opciones correspondientes.
     if st.checkbox('Tamaño:'):
         tamanoAve = st.selectbox('Elije tamaño', ['',
@@ -166,6 +279,7 @@ with col1:
     # como cadenas vacías ya no da. No obstante lo dejamos.
     try:
         # Vamos filtrando por cada etiqueta recogiendo la selección anterior
+        df = df[df['Ave'].str.contains(nombreAve, case=False)]
         df = df[df['Tamaño'].str.contains(tamanoAve, case=False)]
         df = df[df['Hábitat'].str.contains(habitatAve, case=False)]
         df = df[df['Comportamiento'].str.contains(comportamientoAve, case=False)]
@@ -189,7 +303,7 @@ with col1:
         mifichero.close()
         # Si no hay nada seleccionado no se muestra ninguna ficha y en caso contrario se muestran las
         # fichas de las aves seleccionadas
-        if tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+        if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
                 picoGrorsor == picoLongitud == "":
             pass
         else:
@@ -202,7 +316,10 @@ with col2:
     # Indicamos un subtítulo
     st.subheader('_Uso del buscador:_')
     # Informamos de los pasos a seguir
-
+    
+    st.write("**_Si sabes qué ave es pincha en la casilla de verificación 'Ave' de la barra lateral y busca tu ave en "
+             "el desplegable._**")
+    st.write("**_Si no estás seguro sigue las siguientes instruciones:_**")
     st.write("**_1. Para iniciar la identificación hay que elegir algún filtro de la barra lateral, pinchar en la flecha "
              "del cuadro de selección y seleccionar una opción._**")
     st.write("**_2. Con cada filtro elegido vamos cribando el número de aves._**")
@@ -226,7 +343,7 @@ with col2:
     for valor in dfImagen.values.tolist():
         # Si no hay nada seleccionado no se muestra ninguna foto y en caso contrario se muestran las fotos de las
         # aves seleccionadas
-        if tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+        if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
                 picoGrorsor == picoLongitud == "":
             pass
         else:
