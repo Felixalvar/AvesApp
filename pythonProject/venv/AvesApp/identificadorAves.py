@@ -141,7 +141,7 @@ with st.sidebar:
   
     # Creamos las casillas de verificación y sus opciones correspondientes.
     if st.checkbox('Tamaño:'):
-        tamanoAve = st.selectbox('Elije tamaño', ['',
+        tamanoAve = st.selectbox('Elige tamaño', ['',
                                                   'Más pequeño  que un gorrión',
                                                   'Como un gorrión',
                                                   'Entre un gorrión y un mirlo',
@@ -154,7 +154,7 @@ with st.sidebar:
                                                   ])
 
     if st.checkbox('Hábitat'):
-        habitatAve = st.selectbox('Elije hábitat', ['',
+        habitatAve = st.selectbox('Elige hábitat', ['',
                                                     'Bosque/Árboles',
                                                     'Arbustos',
                                                     'Herbazales',
@@ -168,7 +168,7 @@ with st.sidebar:
                                                     ])
 
     if st.checkbox("Comportamiento"):
-        comportamientoAve = st.selectbox('Elije comportamiento', ['',
+        comportamientoAve = st.selectbox('Elige comportamiento', ['',
                                                                   'En un bando o grupo',
                                                                   'Con otras aves',
                                                                   'Cazando/Pescando',
@@ -186,7 +186,7 @@ with st.sidebar:
 
     if st.checkbox("Color"):
         colorAve = st.selectbox(
-            'Elije color', ['',
+            'Elige color', ['',
                             'Blanco',
                             'Negro',
                             'Pío: blanco y negro',
@@ -202,7 +202,7 @@ with st.sidebar:
 
     if st.checkbox("Patas color"):
         patasColor = st.selectbox(
-            'Elije color patas', ['',
+            'Elige color patas', ['',
                                   'Blanco',
                                   'Negro',
                                   'Naranja',
@@ -217,7 +217,7 @@ with st.sidebar:
 
     if st.checkbox("Pico color"):
         picoColor = st.selectbox(
-            'Elije color pico', ['',
+            'Elige color pico', ['',
                                  'Blanco',
                                  'Negro',
                                  'Naranja',
@@ -232,7 +232,7 @@ with st.sidebar:
 
     if st.checkbox("Pico forma"):
         picoForma = st.selectbox(
-            'Elije forma pico', ['',
+            'Elige forma pico', ['',
                                  'Ganchudo',
                                  'Curvado',
                                  'Puñal',
@@ -243,7 +243,7 @@ with st.sidebar:
 
     if st.checkbox("Pico grosor"):
         picoGrorsor = st.selectbox(
-            'Elije grosor pico', ['',
+            'Elige grosor pico', ['',
                                   'Fino',
                                   'Medio',
                                   'Grueso',
@@ -251,7 +251,7 @@ with st.sidebar:
 
     if st.checkbox("Pico longitud"):
         picoLongitud = st.selectbox(
-            'Elije longitud pico', ['',
+            'Elige longitud pico', ['',
                                     'Corto',
                                     'Medio',
                                     'Largo',
