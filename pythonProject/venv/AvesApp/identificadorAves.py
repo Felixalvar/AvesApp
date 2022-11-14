@@ -16,6 +16,18 @@ st.set_page_config(
     layout='wide',
 )
 
+# Pomemos el título
+st.title("_Buscador De Aves Do Baixo Miño_")
+st.caption(
+    """
+    **Espacio declarado Red Natura 2000 y** 
+    **Zona de Especial Protección para las Aves (ZEPA)**.
+    https://es.wikipedia.org/wiki/Red_Natura_2000  
+    **Baixo Miño**.
+    https://gl.wikipedia.org/wiki/Comarca_do_Baixo_Mi%C3%B1o
+"""
+)
+
 # Inicializamos todos los filtros de la barra lateral con una cadena vacía para que al iniciar la aplicación no dé
 # ningún error.
 nombreAve = tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor = picoColor = picoForma = picoGrorsor = \
@@ -284,10 +296,10 @@ with col1:
     # Situamos a los usuarios geográficamente mediante la imagen de un mapa con los concellos que forman O Baixo Miño.
     # st.subheader('_Situación geográfica:_')
     # st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/BaixoMino.png')
-    st.caption("""**Espacio declarado Red Natura 2000 y Zona de Especial Protección para las Aves (ZEPA)**.
-                  https://es.wikipedia.org/wiki/Red_Natura_2000
-                  **Baixo Miño**.
-                  https://gl.wikipedia.org/wiki/Comarca_do_Baixo_Mi%C3%B1o""")
+    # st.caption("""**Espacio declarado Red Natura 2000 y Zona de Especial Protección para las Aves (ZEPA)**.
+                  # https://es.wikipedia.org/wiki/Red_Natura_2000
+                  # **Baixo Miño**.
+                  # https://gl.wikipedia.org/wiki/Comarca_do_Baixo_Mi%C3%B1o""")
     # Recorremos el fichero .ods con pd.read_excel.
     df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:L')
 
