@@ -24,6 +24,20 @@ nombreAve = tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor =
 # Creamos los checkbox de cada filtro de búsqueda en la barra lateral con sus opciones correspondientes y la
 # primera vacía.
 with st.sidebar:
+    # Informamos de los pasos a seguir
+    st.subheader('_Uso del buscador:_')
+    st.write("**_Si sabes el ave, pincha en la casilla de verificación 'Ave', más abajo, y búscala en "
+             "el desplegable._**")
+    st.write("**_Si no la sabes, sigue las instruciones:_**")
+    st.write(
+        "**_1. Para iniciar la identificación elige algún filtro, pincha en la flecha "
+        "del cuadro de selección y busca una opción._**")
+    st.write("**_2. Con cada filtro elegido vamos cribando el número de aves._**")
+    st.write("**_3. Ve eligiendo el filtro que más te convenga._**")
+    st.write("**_4. El orden de elección de los filtros no es importante._**")
+    st.write(
+        "**_5. Si con los filtros elegidos no encuentras tu ave, limpia los filtros y vuelve a empezar._**")
+    st.caption("_____________________")
     # Creamos la etiqueta subtítulo 'Filtro'
     st.subheader('Filtros:')
     # Creamos las casillas de verificación y sus opciones correspondientes. La primera opoción son todas las aves para
@@ -268,10 +282,12 @@ col1, col2 = st.columns([1, 1], gap="large")
 # Damos contenido a la columna de la izquierda donde irán las fichas de las aves seleccionadas.
 with col1:
     # Situamos a los usuarios geográficamente mediante la imagen de un mapa con los concellos que forman O Baixo Miño.
-    st.subheader('_Situación geográfica:_')
-    st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/BaixoMino.png')
+    # st.subheader('_Situación geográfica:_')
+    # st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/BaixoMino.png')
     st.caption("""**Espacio declarado Red Natura 2000 y Zona de Especial Protección para las Aves (ZEPA)**.
-                  https://es.wikipedia.org/wiki/Red_Natura_2000""")
+                  https://es.wikipedia.org/wiki/Red_Natura_2000
+                  **Baixo Miño**.
+                  https://gl.wikipedia.org/wiki/Comarca_do_Baixo_Mi%C3%B1o""")
     # Recorremos el fichero .ods con pd.read_excel.
     df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:L')
 
@@ -310,23 +326,23 @@ with col1:
             st.subheader('_Ficha:_')
             st.caption(texto)
 
-# En la colmna de la derecha mostraremos la/s foto/s del/de las ave/s filtrada/s, e informaremos como usar el buscador.
+# En la colmna de la derecha mostraremos la/s foto/s del/de las ave/s filtrada/s, (e informaremos como usar el buscador).
 with col2:
     # INFORMACIÓN DEL FUNCIONAMIENTO DEL PROGRAMA
     # Indicamos un subtítulo
-    st.subheader('_Uso del buscador:_')
+    # st.subheader('_Uso del buscador:_')
     # Informamos de los pasos a seguir
     
-    st.write("**_Si sabes qué ave es pincha en la casilla de verificación 'Ave' de la barra lateral y busca tu ave en "
-             "el desplegable._**")
-    st.write("**_Si no estás seguro sigue las siguientes instruciones:_**")
-    st.write("**_1. Para iniciar la identificación hay que elegir algún filtro de la barra lateral, pinchar en la flecha "
-             "del cuadro de selección y seleccionar una opción._**")
-    st.write("**_2. Con cada filtro elegido vamos cribando el número de aves._**")
-    st.write("**_3. Ve eligiendo el filtro que más te convenga._**")
-    st.write("**_4. El orden de elección de los filtros no es importante._**")
-    st.write("**_5. Si con los filtros elegidos no encuentras tu ave, puedes limpiar los filtros y volver a empezar._**")
-    st.write("**_6. Comienza cuando quieras._**")
+    # st.write("**_Si sabes qué ave es pincha en la casilla de verificación 'Ave' de la barra lateral y busca tu ave en "
+    #         "el desplegable._**")
+    # st.write("**_Si no estás seguro sigue las siguientes instruciones:_**")
+    # st.write("**_1. Para iniciar la identificación hay que elegir algún filtro de la barra lateral, pinchar en la flecha "
+    #          "del cuadro de selección y seleccionar una opción._**")
+    # st.write("**_2. Con cada filtro elegido vamos cribando el número de aves._**")
+    # st.write("**_3. Ve eligiendo el filtro que más te convenga._**")
+    # st.write("**_4. El orden de elección de los filtros no es importante._**")
+    # st.write("**_5. Si con los filtros elegidos no encuentras tu ave, puedes limpiar los filtros y volver a empezar._**")
+    # st.write("**_6. Comienza cuando quieras._**")
 
     # Filtramos el dataframe por la columna Foto con los sucesivos filtros
     dfImagen = df.filter(items=['Foto'])
