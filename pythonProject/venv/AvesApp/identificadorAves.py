@@ -284,7 +284,7 @@ with st.sidebar:
                                     ])
 
 # Pomemos el título
-st.title("_Buscador De Aves Do Baixo Miño_")
+# st.title("_Buscador De Aves Do Baixo Miño_")
 
 # Dividimos la página en dos columnas iguales
 col1, col2 = st.columns([1, 1], gap="large")
