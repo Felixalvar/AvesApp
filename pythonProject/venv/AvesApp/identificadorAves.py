@@ -335,7 +335,7 @@ with col1:
 
     except NameError:
         # Damos información al usuario
-        st.subheader("Para iniciar la identificación hay que elegir algún filtro")
+        st.write("Para iniciar la identificación hay que elegir algún filtro")
 
     # Convertimos el dfFichas en una lista que recorremos con for para mostrar las fichas de las aves seleccionadas con
     # cada filtro
@@ -376,7 +376,7 @@ with col2:
 
     # Sin no hay ningún ave seleccionada se le indica al usuario que con esos filtros no se localiza ningún ave
     if dfImagen.empty:
-        st.subheader("_Con los filtros seleccionados no hay ningún ave en la base de datos._"
+        st.write("_Con los filtros seleccionados no hay ningún ave en la base de datos._"
                      " _Inténtalo de nuevo._")
     else:
         pass
