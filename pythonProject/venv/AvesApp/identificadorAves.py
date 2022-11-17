@@ -180,7 +180,6 @@ with st.sidebar:
                                                   'Zorzal Común',
                                                   ])
   
-    # Creamos las casillas de verificación y sus opciones correspondientes.
     if st.checkbox('Tamaño:'):
         tamanoAve = st.selectbox('Elige tamaño', ['',
                                                   'Más pequeño  que un gorrión',
