@@ -349,7 +349,7 @@ with col1:
                 picoGrorsor == picoLongitud == "":
             pass
         else:
-            st.write('_Ficha:_')
+            # st.write('_Ficha:_')
             st.caption(texto)
 
 # En la colmna de la derecha mostraremos la/s foto/s del/de las ave/s filtrada/s, (e informaremos como usar el buscador).
@@ -389,5 +389,5 @@ with col2:
                 picoGrorsor == picoLongitud == "":
             pass
         else:
-            st.write('_Foto:_')
+            # st.write('_Foto:_')
             st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
