@@ -349,6 +349,7 @@ with col1:
                 picoGrorsor == picoLongitud == "":
             pass
         else:
+            st.write('**_______________________________________________________**')
             # st.write('_Ficha:_')
             st.caption(texto)
 
@@ -389,5 +390,6 @@ with col2:
                 picoGrorsor == picoLongitud == "":
             pass
         else:
+            st.write('**_______________________________________________________**')
             # st.write('_Foto:_')
             st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
